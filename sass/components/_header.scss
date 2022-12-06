@@ -1,0 +1,384 @@
+.header-page {
+    background-color: $white-color;
+
+    & .container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    @media screen and (min-width: $desktop) {
+        height: 80px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        height: 80px;
+    }
+
+ }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $tablet - 1px) {
+        margin-bottom: 306px;
+        margin-left: 25px;
+    }
+}
+
+.header__logo {
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: $logo-color;
+    @media screen and (min-width: $desktop - 1px) {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        margin-right: 0;
+    }
+    @media screen and (min-width: $desktop) {
+        font-size: 26px;
+        line-height: calc(31 / 26);
+    }
+    
+  /*  padding-top: 24px;
+    padding-bottom: 25px;*/
+}
+
+.web {
+    color: $active-color;
+}
+
+@media screen and (min-width: $desktop) {
+  .nav-site {
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
+    @media screen and (max-width: $tablet - 1px) {
+        margin-left: 96px;
+    }
+
+    & a {
+        @media screen and (max-width: $desktop) {
+        position: relative;
+        display: block;
+        line-height: 1.14;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+       /* color: $main-color;*/
+        padding-top: 32px;
+        padding-bottom: 32px;
+        transition: color 250ms $timing-function;
+        }
+    }
+
+  /*  & a:hover, & a:focus {
+        color: $active-color;
+    }*/
+
+    &__item:not(:last-child), &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+}
+
+a.current {
+    color: $active-color;
+    }
+
+a.current {
+    color: $active-color;
+
+    &::after {
+    content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $active-color;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .nav-site {
+        display: flex;
+        align-items: center;
+        margin-left: 87px;
+        margin-right: 96px;
+    
+        & a {
+            position: relative;
+            display: block;
+            line-height: 1.14;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: $main-color;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            transition: color 250ms $timing-function;
+        }
+    
+        & a:hover, & a:focus {
+            color: $active-color;
+        }
+    
+        &__item:not(:last-child), &__item:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+
+    a.current {
+        color: $active-color;
+    
+        &::after {
+        content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $active-color;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $tablet - 1px) {
+    .nav-site a {
+      display: flex;
+      flex-direction: column-reverse;
+      color: $active-color;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.175;
+      letter-spacing: 0.02em;
+      color: $main-color;
+      transition: color 250ms $timing-function;
+    
+    }
+
+    .nav-site a:hover,
+    .nav-site a:focus {
+        color: $active-color;
+    }
+    .nav-site__item:not(:last-child) {
+      margin-top: 32px;
+      margin-bottom: 64px;
+    }
+
+    
+}
+
+
+ 
+.nav-contact {
+    display: flex;
+    margin-left: auto;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+
+
+    & a {
+        line-height: 1.14;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: $secondary-color;  
+        padding-top: 32px;
+        padding-bottom: 32px;
+        @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+            padding: 0;
+        }
+        transition: color 250ms $timing-function;
+    }
+
+    &__item:not(:last-child), &__item:not(:last-child) {
+        margin-right: 50px;
+        @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    & a:focus, & a:hover {
+        color: $active-color;
+    }
+
+    &__link {
+        display: flex;
+        padding: 0;
+        align-items: center;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+
+    & a &__icon:hover, & a &__icon:focus {
+        fill: $active-color;
+    }
+}
+
+@media screen and (max-width: $tablet - 1px) {
+    .nav-contact {
+      display: flex;
+      flex-direction: column-reverse;
+      color: $secondary-color;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.175;
+      letter-spacing: 0.02em;
+      color: $main-color;
+      transition: color 250ms $timing-function;
+      margin-left: 25px;
+    }
+    .nav-contact__item:not(:last-child) {
+      margin-top: 32px;
+      margin-bottom: 64px;
+    }
+  
+    .nav-contact a[href='mailto:info@devstudio.com'] {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: calc(28 / 24);
+      letter-spacing: 0.02em;
+  
+      color: $secondary-color;
+    }
+
+    a.nav-contact__link {
+        color: $active-color;
+    }
+}
+
+.nav-contact__icon {
+    @media screen and (max-width: $tablet - 1px) {
+      display: none;
+    }
+    margin-right: 10px;
+    fill: currentColor;
+    stroke: currentColor;
+}
+  
+.line {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.menu-toggle {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 9;
+    fill: black;
+  
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+}
+  
+.menu-toggle__svg {
+&--open {
+    display: block;
+}
+.menu-toggle.is-open &--open {
+    display: none;
+}
+
+&--close {
+    display: none;
+    transition: fill 250ms $timing-function;
+}
+.menu-toggle.is-open &--close {
+    display: block;
+}
+
+.menu-toggle &--close:hover,
+.menu-toggle &--close:focus {
+    fill: $active-color;
+    cursor: pointer;
+}
+}
+
+.menu-container {
+    @media screen and (max-width: $tablet - 1px) {
+    display: none;
+    opacity: 0;
+    transform: scale(0.4);
+    transition: transform 250ms $timing-function;
+}
+
+@media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: $desktop) {
+    min-width: 950px;
+}
+}
+
+.menu-container.is-open {
+    @media screen and (max-width: $tablet - 1px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: block;
+    overflow-y: scroll;
+    z-index: 9;
+    opacity: 1;
+    transform: scale(1);
+
+    padding: 48px 40px;
+
+    background: $white-color;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+}
+  
+@media screen and (max-width: $tablet - 1px) {
+    .mobile-social-list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-left: 25px;
+    }
+    .mobile-social-list__item:not(:last-child) {
+      margin-right: 20px;
+  
+      &::after {
+        content: '';
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        transform: rotate(90deg);
+  
+        margin-left: 10px;
+      }
+    }
+    .mobile-social-list__link {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: calc(22 / 18);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: $active-color;
+    }
+  }
+  

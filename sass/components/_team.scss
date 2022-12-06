@@ -1,0 +1,56 @@
+.team {
+    background: $bg-light;
+}
+
+.team-card {
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin-left: calc(-1 * $card-set-gap);
+    @media screen and (max-width: $tablet - 1px) {
+        flex-direction: column;
+       
+    }
+    & > &__item {
+    
+        flex-basis: calc(100% / 4 - $card-set-gap);
+        margin-left: $card-set-gap;
+
+        @media screen and (max-width: $desktop - 1px) {
+            flex-basis: calc(100% / 2 - $card-set-gap);
+            margin-left: $card-set-gap;
+            margin-bottom: $card-set-gap;
+            
+        }
+        @media screen and (max-width: $tablet - 1px) {
+            margin-bottom: $card-set-gap;
+        }
+        background-color: $white-color;
+        border: 1px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+        letter-spacing: 0.03em;
+    
+        color: $main-color;
+    
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    &__text {
+        font-size: 16px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+    
+        color: $secondary-color;
+    
+        margin-bottom: 16px;
+    }
+}

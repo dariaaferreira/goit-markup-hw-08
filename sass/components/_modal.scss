@@ -1,0 +1,323 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 250ms $timing-function;    
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 609px;
+    @media screen and(min-width: $desktop) {
+        width: 528px;
+        height: 581px;
+    }
+
+
+    background-color: $white-color;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms $timing-function, box-shadow 250ms $timing-function;
+
+    .backdrop.is-hidden & {
+        transform: translate (-50%, -50%) scale(1.1);
+    }
+
+    &-close {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        transition: fill 250ms $timing-function;
+    }
+    
+    &-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.1;
+        text-align: center;
+        margin-bottom: 12px;
+        color: $main-color;
+    }
+    
+    &-form {
+        padding: 40px;
+    }
+    
+}
+
+.modal-button {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover,
+    &:focus {
+        animation: icon-close 350ms $timing-function;
+    }
+}
+
+.modal-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(5px, 5px);
+
+    .modal-button:hover &,
+    .modal-button:focus & {
+        fill: $active-color;
+    }
+}
+
+.group {
+    margin-bottom: 30px;
+}
+
+.form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+
+    &:last-child, 
+    &:nth-last-child(2) {
+        margin: 0;
+    }
+
+    & label {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+
+        color: $secondary-color;
+        text-align: start;
+    }
+
+    & input {
+        width: 100%;
+        height: 40px;
+        padding-left: 42px;
+        padding-right: 10px;
+        margin-top: 4px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        transition: border 250ms $timing-function;
+    }
+
+    & input:focus {
+        border-color: $active-color;
+        cursor: pointer;
+    }
+
+    & input:focus-visible {
+        outline: 0px;
+    }
+
+    & .comment {
+        padding: 12px 16px;
+        margin-top: 4px;
+        font-family: inherit;
+        transition: border 250ms $timing-function;
+    }
+
+    & .comment:focus {
+        border-color: $active-color;
+        cursor: pointer;
+    }
+
+    & .comment:focus-visible {
+        outline: 0px;
+    }
+
+    & .policy {
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-size: 12px;
+
+        @media screen and(min-width: $desktop) {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+    }
+}
+
+.policy-descr {
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    @media screen and(min-width: $desktop) {
+        font-size: 14px;
+    }
+}
+
+textarea {
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color:rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus {
+        border-color: $active-color; 
+    }
+}
+
+.icon-modal {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+    input:focus + & {
+        fill: $active-color;
+        transition: fill 250ms $timing-function;
+    }
+}
+
+.policy {
+    display: flex;
+    align-items: center;
+    
+    line-height: 1.7;
+    color: $secondary-color;
+     
+    transition: transform 250ms $timing-function;
+    & a {
+        color: $active-color;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    & .checkbox {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+  /*overflow: hidden;*/
+}
+
+.icon-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 9px;
+
+    border: 2px solid $main-color;
+    border-radius: 2px;
+
+    .checkbox:checked + & {
+        background-color: $active-color;
+        border-color: $active-color;
+        background-origin: border-box;
+    }
+}
+
+.icon-check {
+    position: absolute;
+    bottom: 3px;
+    fill: $white-color;
+
+    @media screen and(min-width: $desktop) {
+        left: 10px;
+    }
+
+    .checkbox:checked + & {
+        fill: $white-color;
+    }
+}
+
+@keyframes icon-close {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button-modal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 50px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    
+    color: $white-color;
+    background-color: $active-color;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms $timing-function, box-shadow 250ms $timing-function;
+
+    &:hover, &:focus {
+        cursor: pointer;
+        background-color: #188CE8;
+    } 
+}
