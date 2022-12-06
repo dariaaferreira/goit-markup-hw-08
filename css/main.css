@@ -1620,6 +1620,7 @@ input:focus + .icon-modal {
     margin-left: auto;
     /* margin-top: -15px;*/
     margin-bottom: 85px;
+    margin-right: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
