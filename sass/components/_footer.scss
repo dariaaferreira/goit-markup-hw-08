@@ -18,7 +18,6 @@
     background-color: $bg-dark;
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 15px;
     
 
     &-contacts {
@@ -158,7 +157,7 @@
 .footer-subscribe {
     display: flex;
     flex-direction: column;
-    
+
     @media screen and (min-width: $desktop){
         margin-left: auto;
          padding-top: 12px;
