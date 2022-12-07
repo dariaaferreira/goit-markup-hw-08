@@ -156,6 +156,9 @@
 }
 
 .footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    
     @media screen and (min-width: $desktop){
         margin-left: auto;
          padding-top: 12px;
