@@ -208,21 +208,17 @@ a.current {
         font-weight: 500;
         letter-spacing: 0.02em;
         color: $secondary-color;  
-        padding-top: 32px;
-        padding-bottom: 32px;
-        @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-            padding: 0;
-        }
-        @media screen and (max-width: $tablet - 1 px) {
-            padding-top: 0px;
-        }
         transition: color 250ms $timing-function;
+        
     }
 
-    &__item:not(:last-child), &__item:not(:last-child) {
+    &__item:not(:last-child) {
         margin-right: 50px;
         @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
             margin-bottom: 10px;
+        }
+        @media screen and (max-width: $tablet - 1 px) {
+            padding-bottom: 32px;
         }
     }
 
@@ -232,8 +228,11 @@ a.current {
 
     &__link {
         display: flex;
-        padding: 0;
         align-items: center;
+        padding-bottom: 32px;
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 0;
+        }
     }
 
     &__icon {
@@ -322,6 +321,7 @@ a.current {
 }
 .menu-toggle.is-open &--close {
     display: block;
+    position: fixed;
 }
 
 .menu-toggle &--close:hover,
