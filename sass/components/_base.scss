@@ -58,8 +58,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0px;
 
     @media screen and (min-width: $desktop) {
         padding: 94px 0px;
