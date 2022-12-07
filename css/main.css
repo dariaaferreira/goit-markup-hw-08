@@ -1574,7 +1574,7 @@ input:focus + .icon-modal {
   margin-bottom: 20px;
   color: #ffffff;
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .footer__title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1668,7 +1668,6 @@ input:focus + .icon-modal {
 }
 
 .input-subscribe {
-  width: 358px;
   height: 50px;
   /* margin-right: 12px;*/
   margin-bottom: 20px;
@@ -1687,6 +1686,11 @@ input:focus + .icon-modal {
 @media screen and (min-width: 1200px) {
   .input-subscribe {
     width: 358px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .input-subscribe {
+    width: 450px;
   }
 }
 .input-subscribe:focus {
