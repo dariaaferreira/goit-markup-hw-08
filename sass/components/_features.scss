@@ -18,10 +18,6 @@
             flex-basis: calc(100% / 2 - $card-set-gap);
             margin-right: $card-set-gap;
         }
-        @media screen and (max-width: $desktop) {
-            flex-basis: calc(100% / 2 - $card-set-gap);
-            margin-right: $card-set-gap;
-        }
         @media screen and (min-width: $desktop) {
             flex-basis: calc(100% / 4 - $card-set-gap);
             margin-right: $card-set-gap;
