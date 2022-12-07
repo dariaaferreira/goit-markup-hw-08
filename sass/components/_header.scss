@@ -1,4 +1,6 @@
 .header-page {
+    position: relative;
+    padding: 0px 0px;
     background-color: $white-color;
 
     & .container {
@@ -23,7 +25,6 @@
 
     @media screen and (max-width: $tablet - 1px) {
         margin-bottom: 306px;
-        margin-left: 25px;
     }
 }
 
@@ -256,7 +257,6 @@ a.current {
       letter-spacing: 0.02em;
       color: $main-color;
       transition: color 250ms $timing-function;
-      margin-left: 25px;
     }
     .nav-contact__item:not(:last-child) {
       margin-bottom: 32px;
@@ -291,8 +291,8 @@ a.current {
 
 .menu-toggle {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 22px;
+    right: 23px;
 
     display: flex;
     justify-content: center;
@@ -309,26 +309,26 @@ a.current {
 }
   
 .menu-toggle__svg {
-&--open {
-    display: block;
-}
-.menu-toggle.is-open &--open {
-    display: none;
-}
+    &--open {
+        display: block;
+    }
+    .menu-toggle.is-open &--open {
+        display: none;
+    }
 
-&--close {
-    display: none;
-    transition: fill 250ms $timing-function;
-}
-.menu-toggle.is-open &--close {
-    display: block;
-}
+    &--close {
+        display: none;
+        transition: fill 250ms $timing-function;
+    }
+    .menu-toggle.is-open &--close {
+        display: block;
+    }
 
-.menu-toggle &--close:hover,
-.menu-toggle &--close:focus {
-    fill: $active-color;
-    cursor: pointer;
-}
+    .menu-toggle &--close:hover,
+    .menu-toggle &--close:focus {
+        fill: $active-color;
+        cursor: pointer;
+    }
 }
 
 .menu-container {
@@ -350,13 +350,13 @@ a.current {
 
 .menu-container.is-open {
     @media screen and (max-width: $tablet - 1px) {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
         display: block;
-        overflow-y: scroll;
+        overflow-y: hidden;
         z-index: 9;
         opacity: 1;
         transform: scale(1);
@@ -366,6 +366,8 @@ a.current {
         background: $white-color;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
           0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    
     }
 }
   
@@ -394,5 +396,4 @@ a.current {
       text-decoration: none;
       color: $active-color;
     }
-  }
-  
+}  
