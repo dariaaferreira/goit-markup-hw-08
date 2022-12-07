@@ -374,6 +374,7 @@ a.current {
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      flex-wrap: wrap
     }
     .mobile-social-list__item:not(:last-child) {
       margin-right: 20px;
