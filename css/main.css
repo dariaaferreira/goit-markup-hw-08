@@ -986,11 +986,9 @@ a.current::after {
   color: #2196F3;
 }
 
-@media screen and (min-width: 480px) {
-  .client-list__item {
-    -ms-flex-preferred-size: calc((100% - 30px) / 2);
-        flex-basis: calc((100% - 30px) / 2);
-  }
+.client-list__item {
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
   .client-list__item {

@@ -37,9 +37,9 @@
 }
 
 .client-list__item {
-    @media screen and (min-width: $mobile) {
-      flex-basis: calc((100% - 30px) / 2);
-    }
+
+    flex-basis: calc((100% - 30px) / 2);
+
     @media screen and (min-width: $tablet) {
       flex-basis: calc((100% - 60px) / 3);
     }
