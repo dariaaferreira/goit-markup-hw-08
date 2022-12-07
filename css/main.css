@@ -44,10 +44,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .container {
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   max-width: 480px;
 }
 @media screen and (min-width: 768px) {
@@ -341,7 +342,6 @@ a.current::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
   .nav-contact__link {
@@ -374,14 +374,13 @@ a.current::after {
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .nav-contact__item:not(:last-child) {
-    margin-bottom: 32px;
-  }
   .nav-contact a[href="mailto:info@devstudio.com"] {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.1666666667;
     letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 64px;
     color: #757575;
   }
   a.nav-contact__link {

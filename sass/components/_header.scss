@@ -230,7 +230,6 @@ a.current {
     &__link {
         display: flex;
         align-items: center;
-        padding-bottom: 32px;
         @media screen and (min-width: $tablet) {
             padding-bottom: 0;
         }
@@ -258,15 +257,14 @@ a.current {
       color: $main-color;
       transition: color 250ms $timing-function;
     }
-    .nav-contact__item:not(:last-child) {
-      margin-bottom: 32px;
-    }
   
     .nav-contact a[href='mailto:info@devstudio.com'] {
       font-weight: 500;
       font-size: 24px;
       line-height: calc(28 / 24);
       letter-spacing: 0.02em;
+      padding-top: 32px;
+      padding-bottom: 64px;
   
       color: $secondary-color;
     }
