@@ -9,7 +9,7 @@
   
     padding-top: 200px;
     padding-bottom: 200px;
-  
+    
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero.jpg);
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@
           url(../images/hero-tablet@2x.jpg);
       }
     }
-    @media (min-width: $desktop) {
+    @media (min-width: $desktop) and (max-width: 1600px) {
       min-width: 1200px;
       min-height: 600px;
       background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -41,6 +41,7 @@
           url(../images/hero-desktop@2x.jpg);
       }
     }
+    
 
   &__title {
     font-size: 26px;
