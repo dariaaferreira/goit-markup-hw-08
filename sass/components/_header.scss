@@ -372,6 +372,7 @@ a.current {
 @media screen and (max-width: $tablet - 1px) {
     .mobile-social-list {
       display: flex;
+      flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
       margin-left: 25px;
